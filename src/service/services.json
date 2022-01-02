@@ -1,0 +1,14 @@
+{
+    "id": "org.webosbrew.btwitch.service",
+    "description": "Better Twitch-App Service",
+    "services": [
+        {
+            "name": "call",
+            "public": true
+        },
+        {
+            "name": "shut",
+            "public": true
+        }
+    ]
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "package": "ares-package ./dist -o ipks"
+    "package": "ares-package ./dist/app ./dist/service -o ipks"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,15 @@
   },
   "dependencies": {
     "core-js": "^3.20.2",
+    "path": "^0.12.7",
     "regenerator-runtime": "^0.13.9",
+    "webos-service": "git+https://github.com/webosose/nodejs-module-webos-service.git",
     "whatwg-fetch": "^3.6.2"
+  },
+  "browser": {
+    "http": false,
+    "path": false,
+    "fs": false,
+    "url": false
   }
 }

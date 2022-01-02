@@ -4,5 +4,4 @@ function main() {
   handleLaunch(extractLaunchParams());
 }
 
-
 main();
