@@ -1,0 +1,14 @@
+{
+    "id": "org.webosbrew.btwitch",
+    "version": "0.0.1",
+    "vendor": "My Company",
+    "type": "web",
+    "main": "index.html",
+    "title": "Better Twitch-App",
+    "icon": "icon.png",
+    "largeIcon": "largeIcon.png",
+    "iconColor": "#6441a5",
+    "checkUpdateOnLaunch": false,
+    "supportQuickStart": true,
+    "supportGIP": true
+}
