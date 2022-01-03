@@ -14,10 +14,6 @@ export function extractLaunchParams() {
     //
     let { target, contentTarget = target } = params;
   
-    webOS.service.request("luna://org.webosbrew.btwitch.service/", {
-      method: "call"
-    });
-
     if (contentTarget && typeof contentTarget === 'string') {
   
       if (contentTarget.indexOf('https://twitch.tv/') === 0) {
