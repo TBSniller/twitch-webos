@@ -10,4 +10,4 @@ document.addEventListener('webOSRelaunch', (evt) => {
   handleLaunch(evt.detail);
 }, true);
 
-import '../../betterttv/build/betterttv.js';
+import 'betterttv';

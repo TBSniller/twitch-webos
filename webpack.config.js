@@ -23,6 +23,9 @@ module.exports = (env) => [
       filename: ({ chunk: { name } }) => (name === 'userScript') ? 'webOSUserScripts/[name].js' : '[name].js',
       chunkFormat: 'commonjs',
     },
+    externals: {
+      "betterttv": path.resolve(__dirname, "./bttv/betterttv.js")
+    },
     resolve: {
       extensions: ['.ts', '.js'],
     },
