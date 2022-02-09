@@ -16,15 +16,15 @@ export function extractLaunchParams() {
   
     if (contentTarget && typeof contentTarget === 'string') {
   
-      if (contentTarget.indexOf('https://twitch.tv/') === 0) {
+      if (contentTarget.indexOf('https://coyhhqjzbvbinjy4.lg.tv.twitch.tv/') === 0) {
         console.info('Launching from direct contentTarget:', contentTarget);
         window.location = contentTarget;
       } else {
         console.info('Launching from partial contentTarget:', contentTarget);
-        window.location = 'https://twitch.tv/' + contentTarget;
+        window.location = 'https://coyhhqjzbvbinjy4.lg.tv.twitch.tv/' + contentTarget;
       }
     } else {
       console.info('Default launch');
-      window.location = 'https://twitch.tv/';
+      window.location = 'https://coyhhqjzbvbinjy4.lg.tv.twitch.tv/';
     }
   }

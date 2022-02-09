@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "package": "ares-package ./dist/app -o ipks"
+    "package": "ares-package ./dist/app -o ipks",
+    "build-package": "webpack && ares-package ./dist/app -o ipks",
+    "build-package-install-run": "webpack && ares-package ./dist/app -o ipks && ares-install ./ipks/org.webosbrew.btwitch_${npm_package_version}_all.ipk && sleep 3 && ares-launch org.webosbrew.btwitch"
   },
   "repository": {
     "type": "git",

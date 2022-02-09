@@ -23,9 +23,6 @@ module.exports = (env) => [
       filename: ({ chunk: { name } }) => (name === 'userScript') ? 'webOSUserScripts/[name].js' : '[name].js',
       chunkFormat: 'commonjs',
     },
-    externals: {
-      "betterttv": path.resolve(__dirname, "./bttv/betterttv.js")
-    },
     resolve: {
       extensions: ['.ts', '.js'],
     },
@@ -46,9 +43,7 @@ module.exports = (env) => [
         patterns: [
           { context: 'assets/app/', to: "./", from: '**/*', force: true },
           { context: 'src/app/', to: "./", from: 'index.html', force: true },
-          { context: 'src/app/', to: "./", from: 'webOSTVlib/*', force: true },
-          { context: 'betterttv/build/', to: "./bttv", from: '**', force: true,
-         },
+          { context: 'src/app/', to: "./", from: 'webOSTVlib/*', force: true }
         ]
       }),
     ],
