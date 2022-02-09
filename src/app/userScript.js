@@ -10,3 +10,4 @@ document.addEventListener('webOSRelaunch', (evt) => {
   handleLaunch(evt.detail);
 }, true);
 
+import './twitchchat.js';

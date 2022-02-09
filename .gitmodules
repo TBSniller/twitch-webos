@@ -1,0 +1,3 @@
+[submodule "betterttv"]
+	path = betterttv
+	url = https://github.com/TBSniller/betterttv

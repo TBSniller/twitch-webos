@@ -3,6 +3,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env) => [
   {
+    //Frontend
     mode: env.production ? 'production' : 'development',
 
     target: 'es5',
@@ -14,11 +15,11 @@ module.exports = (env) => [
     devtool: false,
 
     entry: {
-      index: './src/index.js',
-      userScript: './src/userScript.js',
+      index: './src/app/index.js',
+      userScript: './src/app/userScript.js',
     },
     output: {
-      path: path.resolve(__dirname, './dist'),
+      path: path.resolve(__dirname, './dist/app'),
       filename: ({ chunk: { name } }) => (name === 'userScript') ? 'webOSUserScripts/[name].js' : '[name].js',
       chunkFormat: 'commonjs',
     },
@@ -40,8 +41,9 @@ module.exports = (env) => [
     plugins: [
       new CopyPlugin({
         patterns: [
-          { context: 'assets', from: '**/*' },
-          { context: 'src', from: 'index.html' },
+          { context: 'assets/app/', to: "./", from: '**/*', force: true },
+          { context: 'src/app/', to: "./", from: 'index.html', force: true },
+          { context: 'src/app/', to: "./", from: 'webOSTVlib/*', force: true }
         ]
       }),
     ],

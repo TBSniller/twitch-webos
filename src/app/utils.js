@@ -14,18 +14,17 @@ export function extractLaunchParams() {
     //
     let { target, contentTarget = target } = params;
   
-  
     if (contentTarget && typeof contentTarget === 'string') {
   
-      if (contentTarget.indexOf('https://m.twitch.tv/') === 0) {
+      if (contentTarget.indexOf('https://coyhhqjzbvbinjy4.lg.tv.twitch.tv/') === 0) {
         console.info('Launching from direct contentTarget:', contentTarget);
         window.location = contentTarget;
       } else {
         console.info('Launching from partial contentTarget:', contentTarget);
-        window.location = 'https://m.twitch.tv/' + contentTarget;
+        window.location = 'https://coyhhqjzbvbinjy4.lg.tv.twitch.tv/' + contentTarget;
       }
     } else {
       console.info('Default launch');
-      window.location = 'https://m.twitch.tv/';
+      window.location = 'https://coyhhqjzbvbinjy4.lg.tv.twitch.tv/';
     }
   }

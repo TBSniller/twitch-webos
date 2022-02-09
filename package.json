@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "package": "ares-package ./dist -o ipks"
+    "package": "ares-package ./dist/app -o ipks",
+    "build-package": "webpack && ares-package ./dist/app -o ipks",
+    "build-package-install-run": "webpack && ares-package ./dist/app -o ipks && ares-install ./ipks/org.webosbrew.btwitch_${npm_package_version}_all.ipk && sleep 3 && ares-launch org.webosbrew.btwitch"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
   "dependencies": {
     "core-js": "^3.20.2",
     "regenerator-runtime": "^0.13.9",
+    "webos-service": "git+https://github.com/webosose/nodejs-module-webos-service.git",
     "whatwg-fetch": "^3.6.2"
   }
 }
