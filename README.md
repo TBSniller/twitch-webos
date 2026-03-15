@@ -1,3 +1,9 @@
+
+## Archive notice
+- The main goal of this application is reached with a port here: https://github.com/TBSniller/SmartTwitchWebOSTV
+- The early stage goal of this repository was archived here: https://github.com/adamff-dev/twitch-adfree-webos
+  
+
 # twitch-webos  
 This should be a better TwitchTV-App.
 This enhances the Twitch-App with the original Twitch-Chat including the BetterTTV extension.  
